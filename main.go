@@ -27,5 +27,7 @@ func main() {
 	cmd.Initial()
 	e, u, _, _, p, r := cmd.GetOptions()
 
-	fmt.Println(GenerateDBAuthToken(e, u, p, r))
+	if e != "" {
+		fmt.Println(GenerateDBAuthToken(e, u, p, r))
+	}
 }
